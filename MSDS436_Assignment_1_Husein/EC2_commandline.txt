@@ -1,0 +1,27 @@
+#***********************************************
+# File: Commands2RunScripts.text
+# Desc: S3 operations
+# Auth: Husein Adenwala
+# Date: 01/21/2022
+#***********************************************/
+
+# EC2 installations commands
+
+sudo yum install python3 -y
+sudo yum install tmux
+pip3 install --user boto3
+pip3 install --user botocore
+pip3 install --user requests
+pip3 install --user argparse
+pip3 install --user zipfile36
+pip3 install --user sh
+python3 -m pip install pandas
+python3 -m pip install beautifulsoup4
+python3 -m pip install klib
+
+# EC2 Commands to create s2 bucket and run code to get API and web scraping data 
+
+python3 awsapi.py -bo create -b aws-assignment1-data  
+python3 USdata.py -b aws-assignment1-data  -o USdata -d USdata/
+python3 zillowdata.py -b aws-assignment1-data  -o zillowdata -d zillowdata/
+python3 Zillow_klib.py -b aws-assignment1-data -o zillowdata -d zillowdata/
