@@ -18,11 +18,11 @@ base = datetime.now()-timedelta(hours=2)
 
 
 # Authentication
-consumerKey = "gdDo4PQroDLU2Qy1NKVt1xETx"
-consumerSecret = "rjIoHcze9SM5LfUf0wj7EXt8VYQaETJHLiVYSRdfgwyuJDJa5B"
-bearertoken  = "AAAAAAAAAAAAAAAAAAAAAA4TYAEAAAAAYzTuv%2FHKW8fk9VQ4TDhj8Yai38c%3DF7ijL0PF4ky3Ul1vU7uHX0jpdr9fl4fO0XfvLjTJK2WIA11r2W"
-accessToken = "1481123891078733826-CnQAmCa9W2R5TbzHWxoI7ciqolKzrP"
-accessTokenSecret = "kV4fjMDaliZelb8DZzgYx5nPxxKvDBTlFKFQJhBRXlk5b"
+consumerKey = "xxxxxx"
+consumerSecret = "xxxx"
+bearertoken  = "xxxx"
+accessToken = "xxxxxxxxxxxx"
+accessTokenSecret = "xxxxxxxxxxxxx"
 auth = tweepy.OAuthHandler(consumerKey, consumerSecret)
 auth.set_access_token(accessToken, accessTokenSecret)
 api = tweepy.API(auth)
