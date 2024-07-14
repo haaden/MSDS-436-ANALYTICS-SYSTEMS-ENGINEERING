@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "4fcb269b-10ee-4da7-9652-96d3785e875e",
+		"name": "MSDS_436_Assignment2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ec2 check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "ec2-54-145-45-25.compute-1.amazonaws.com:5004",
+					"host": [
+						"ec2-54-145-45-25",
+						"compute-1",
+						"amazonaws",
+						"com"
+					],
+					"port": "5004"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bucket operation list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "ec2-54-145-45-25.compute-1.amazonaws.com:5004/buckets",
+					"host": [
+						"ec2-54-145-45-25",
+						"compute-1",
+						"amazonaws",
+						"com"
+					],
+					"port": "5004",
+					"path": [
+						"buckets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bucket create",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "ec2-54-145-45-25.compute-1.amazonaws.com:5004/buckets/list",
+					"host": [
+						"ec2-54-145-45-25",
+						"compute-1",
+						"amazonaws",
+						"com"
+					],
+					"port": "5004",
+					"path": [
+						"buckets",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bucket delete",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "ec2-54-145-45-25.compute-1.amazonaws.com:5004/buckets/delete?bucket_name=aws-assignment1-data",
+					"host": [
+						"ec2-54-145-45-25",
+						"compute-1",
+						"amazonaws",
+						"com"
+					],
+					"port": "5004",
+					"path": [
+						"buckets",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "bucket_name",
+							"value": "aws-assignment1-data"
+						},
+						{
+							"key": "region",
+							"value": "us-east-1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bucket delete Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "ec2-54-145-45-25.compute-1.amazonaws.com:5004/folders/list?bucket_name=aws-assignment1-data",
+					"host": [
+						"ec2-54-145-45-25",
+						"compute-1",
+						"amazonaws",
+						"com"
+					],
+					"port": "5004",
+					"path": [
+						"",
+						"folders",
+						"list"
+					],
+					"query": [
+						{
+							"key": "bucket_name",
+							"value": "aws-assignment1-data"
+						},
+						{
+							"key": "region",
+							"value": "us-east-1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

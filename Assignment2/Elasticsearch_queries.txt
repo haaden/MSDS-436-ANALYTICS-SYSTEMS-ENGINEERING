@@ -1,0 +1,69 @@
+#******************************************************
+# MSDS 436 Assignment2
+# Q3 elasticsearch queries
+# Husein Adenwala
+# 01/29/2022
+#******************************************************/
+
+
+#  query to find all the indices in ES
+GET _cat/indices
+
+# count the total number ot doc in this index
+GET  brfss/_count
+
+# count doc where general health is poor
+GET brfss/_count?q=General_Health:Poor
+
+# search documente with doc id
+
+GET brfss/_doc/56104
+
+# Range Query find the objects having values of weight >=100
+GET brfss/_search
+{
+  "query": {
+    "range": {
+      "Weight_kg" : {
+        "gte" : 200
+      }
+    }
+  }
+}
+
+# multi match query matches text of pharse on two fields
+GET brfss/_search
+{
+   "query":{
+      "multi_match": {
+         "query": "Yes",
+         "fields": [ "Limited_physical_activity","Difficulty_decision_making"]
+      }
+   }
+}
+
+# search education level if it starts with the word Graduate
+GET brfss/_search
+{
+  "query": {
+    "query_string": {
+        "query": "Graduate*",
+        "fields": ["Demo_edu_level"]
+      }
+   }
+}
+
+# fuzzy serch  for a value in a index name
+
+GET brfss/_search
+{
+	"query": {
+	  "fuzzy":{
+		"Aerobic_and_strengthening_guideline" : {
+				"value": "did not meet either guidelin",
+				"fuzziness": "2"
+			}
+		}
+	}
+}
+
